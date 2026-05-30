@@ -10,7 +10,7 @@ WORKDIR /app
 COPY --from=builder /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.9/site-packages
 COPY app.py ./
 COPY templates ./templates
-COPY .env ./
+COPY .env ./ 
 
 EXPOSE 5000
 CMD ["python", "app.py"]
